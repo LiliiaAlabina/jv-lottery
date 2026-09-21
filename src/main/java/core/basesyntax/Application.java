@@ -3,11 +3,10 @@ package core.basesyntax;
 public class Application {
     public static void main(String[] args) {
         Lottery randomBall = new Lottery();
-        Ball one = randomBall.getRandomBall();
-        System.out.println(one);
-        Ball two = randomBall.getRandomBall();
-        System.out.println(two);
-        Ball three = randomBall.getRandomBall();
-        System.out.println(three);
+        Ball[] lotteryBall = new Ball[3];
+        for (int i = 0; i < lotteryBall.length; i++) {
+            lotteryBall[i] = randomBall.getRandomBall();
+            System.out.println(lotteryBall[i]);
+        }
     }
 }
